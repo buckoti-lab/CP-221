@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Me - Yusuph Buckoti</title>
+  <meta name="description" content="Learn more about Yusuph Buckoti, a Computer Science student with web development skills." />
+  <meta name="keywords" content="computer science, web development, portfolio, skills, education, HTML, CSS, JS" />
+  <meta name="author" content="Yusuph Buckoti" />
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    main {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .about-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    .about-left,
+    .about-right {
+      flex: 1;
+      min-width: 300px;
+      background-color: #fff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1, h2 {
+      color: #007bff;
+    }
+
+    img {
+      width: 100%;
+      max-width: 200px;
+      border-radius: 10px;
+    }
+
+    figure {
+      margin: 0 0 15px;
+    }
+
+    figcaption {
+      font-size: 0.9rem;
+      color: #555;
+      margin-top: 5px;
+    }
+
+    .highlight {
+      color: #007bff;
+      font-weight: bold;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    .skills-list ul, .interests-list {
+      list-style-type: disc;
+    }
+
+    .skills-list > li {
+      margin-top: 10px;
+    }
+
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: black;
+      color: white;
+      margin-top: 40px;
+      font-size: 0.9rem;
+    }
+    /* Dark Theme */
+    body.dark-mode {
+    background-color: #121212;
+    color: #f1f1f1;
+    }
+    body.dark-mode .about-left{
+      background-color: black;
+    }
+    body.dark-mode .about-right{
+      background-color: black;
+    } 
+  
+   button {
+   margin-top: 10px;
+   padding: 5px 10px;
+   margin: 5px;
+   cursor: pointer;
+   background-color: gray;
+   border-width: 2px;
+   }
+
+
+    @media screen and (max-width: 768px) {
+      .about-container {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <button id="themeToggle">Toggle Theme</button>
+    <section class="about-container">
+      <div class="about-left">
+        <h1>About Me</h1>
+        <figure>
+          <img src="9784.jpg" alt="Yusuph Buckoti Profile Picture" />
+          <figcaption>Yusuph Buckoti – Continuing Computer Science Student</figcaption>
+        </figure>
+        <p>Hello! I'm <span class="highlight">Yusuph Buckoti</span>, a passionate student of Computer Science at The University of Dodoma. I'm driven by curiosity, creativity, and the desire to build smart solutions for real-world problems.</p>
+        <p>I recently completed training in <span class="highlight">HTML5, CSS3, JavaScript</span>, and <span class="highlight">Python Flask</span>. I'm enthusiastic about front-end and back-end web development, responsive UI/UX, and data-driven applications.</p>
+        <p>Currently, I'm deepening my skills in <span class="highlight">machine learning, data science, and full-stack development</span>, and building real-world projects to sharpen my craft.</p>
+
+        <h2>Skills</h2>
+        <ul class="skills-list">
+          <li><strong>Web Development:</strong>
+            <ul>
+              <li>HTML5, CSS3, JavaScript (ES6+)</li>
+              <li>Python Flask</li>
+              <li>Responsive Design</li>
+            </ul>
+          </li>
+          <li><strong>Programming Languages:</strong>
+            <ul>
+              <li>Python, Java, C++ (Basics), PHP</li>
+            </ul>
+          </li>
+          <li><strong>Databases:</strong>
+            <ul><li>MySQL</li></ul>
+          </li>
+          <li><strong>Tools & Technologies:</strong>
+            <ul>
+              <li>Git, VS Code, Jupyter, IntelliJ IDEA</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <div class="about-right">
+        <h2>My Interests</h2>
+        <ul class="interests-list">
+          <li>Exploring new web technologies and frameworks</li>
+          <li>Contributing to open-source projects</li>
+          <li>Learning algorithms and data structures</li>
+          <li>Machine learning</li>
+          <li>Data science</li>
+        </ul>
+
+        <h2>Education</h2>
+        <p><strong>B.Sc. in Computer Science (Ongoing)</strong><br>
+        University of Dodoma, Tanzania<br>
+        Expected Graduation: 2026</p>
+
+        <p><strong>Web Development Training</strong><br>
+        UDOM, Tanzania<br>
+        July 2024 – September 2024</p>
+
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:anoviyusuph@gmail.com">anoviyusuph@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/govel" target="_blank">linkedin.com/in/yourprofile</a></p>
+        <p>GitHub: <a href="https://github.com/govel" target="_blank">github.com/anovi</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Yusuph Buckoti. All rights reserved.
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      console.log("About Me page loaded.");
+    });
+    
+    document.addEventListener('DOMContentLoaded', () => {
+    const toggleBtn = document.getElementById('themeToggle');
+  
+    // Load saved theme
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark-mode');
+    }
+  
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      // Save the user's theme preference
+      if (document.body.classList.contains('dark-mode')) {
+        localStorage.setItem('theme', 'dark');
+      } else {
+        localStorage.setItem('theme', 'light');
+      }
+    });
+  });
+  
+  </script>
+</body>
+</html>
