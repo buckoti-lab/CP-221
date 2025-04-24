@@ -7,14 +7,14 @@
   <meta name="description" content="Learn more about Yusuph Buckoti, a Computer Science student with web development skills." />
   <meta name="keywords" content="computer science, web development, portfolio, skills, education, HTML, CSS, JS" />
   <meta name="author" content="Yusuph Buckoti" />
+  <link rel="stylesheet" href="general-style.css">
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       background-color: #f9f9f9;
       color: #333;
-    }
-
+    } 
     main {
       padding: 40px 20px;
       max-width: 1200px;
@@ -37,18 +37,22 @@
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
 
-    h1, h2 {
+    h1{
+      color: white;
+    }
+     h2 {
       color: #007bff;
+    }
+
+    figure {
+      margin: 0 0 15px;
+      text-align: center;
     }
 
     img {
       width: 100%;
       max-width: 200px;
       border-radius: 10px;
-    }
-
-    figure {
-      margin: 0 0 15px;
     }
 
     figcaption {
@@ -66,7 +70,8 @@
       padding-left: 20px;
     }
 
-    .skills-list ul, .interests-list {
+    .skills-list ul,
+    .interests-list {
       list-style-type: disc;
     }
 
@@ -78,56 +83,49 @@
       color: #007bff;
       text-decoration: none;
     }
-
-    a:hover {
-      text-decoration: underline;
+    body.dark-mode .about-left,
+    body.dark-mode .about-right {
+      background-color: #1e1e1e;
     }
 
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: black;
-      color: white;
-      margin-top: 40px;
-      font-size: 0.9rem;
-    }
-    /* Dark Theme */
-    body.dark-mode {
-    background-color: #121212;
-    color: #f1f1f1;
-    }
-    body.dark-mode .about-left{
-      background-color: black;
-    }
-    body.dark-mode .about-right{
-      background-color: black;
-    } 
-  
-   button {
-   margin-top: 10px;
-   padding: 5px 10px;
-   margin: 5px;
-   cursor: pointer;
-   background-color: gray;
-   border-width: 2px;
-   }
 
-
-    @media screen and (max-width: 768px) {
+    @media (max-width: 768px) {
       .about-container {
         flex-direction: column;
+      }
+
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      nav a {
+        margin: 5px 10px;
       }
     }
   </style>
 </head>
 <body>
-  <main>
+  <header>
+    <h1>Welcome to My Portfolio</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+      <a href="survey.html">Survey</a>
+    </nav>
     <button id="themeToggle">Toggle Theme</button>
+  </header>
+
+  <main>
     <section class="about-container">
+      <!-- Left Column -->
       <div class="about-left">
         <h1>About Me</h1>
         <figure>
-          <img src="9784.jpg" alt="Yusuph Buckoti Profile Picture" />
+          <img src="9784.jpg" alt="Yusuph Buckoti Profile Picture">
           <figcaption>Yusuph Buckoti – Continuing Computer Science Student</figcaption>
         </figure>
         <p>Hello! I'm <span class="highlight">Yusuph Buckoti</span>, a passionate student of Computer Science at The University of Dodoma. I'm driven by curiosity, creativity, and the desire to build smart solutions for real-world problems.</p>
@@ -159,6 +157,7 @@
         </ul>
       </div>
 
+      <!-- Right Column -->
       <div class="about-right">
         <h2>My Interests</h2>
         <ul class="interests-list">
@@ -180,8 +179,8 @@
 
         <h2>Contact</h2>
         <p>Email: <a href="mailto:anoviyusuph@gmail.com">anoviyusuph@gmail.com</a></p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/govel" target="_blank">linkedin.com/in/yourprofile</a></p>
-        <p>GitHub: <a href="https://github.com/govel" target="_blank">github.com/anovi</a></p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/govel" target="_blank" rel="noopener noreferrer">linkedin.com/in/yourprofile</a></p>
+        <p>GitHub: <a href="https://buckoti-lab.github.io/project-showcase/" target="_blank" rel="noopener noreferrer">github.com/anovi</a></p>
       </div>
     </section>
   </main>
@@ -191,29 +190,19 @@
   </footer>
 
   <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      console.log("About Me page loaded.");
-    });
-    
     document.addEventListener('DOMContentLoaded', () => {
-    const toggleBtn = document.getElementById('themeToggle');
-  
-    // Load saved theme
-    if (localStorage.getItem('theme') === 'dark') {
-      document.body.classList.add('dark-mode');
-    }
-  
-    toggleBtn.addEventListener('click', () => {
-      document.body.classList.toggle('dark-mode');
-      // Save the user's theme preference
-      if (document.body.classList.contains('dark-mode')) {
-        localStorage.setItem('theme', 'dark');
-      } else {
-        localStorage.setItem('theme', 'light');
+      const toggleBtn = document.getElementById('themeToggle');
+      if (localStorage.getItem('theme') === 'dark') {
+        document.body.classList.add('dark-mode');
       }
+
+      toggleBtn.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+        localStorage.setItem('theme',
+          document.body.classList.contains('dark-mode') ? 'dark' : 'light'
+        );
+      });
     });
-  });
-  
   </script>
 </body>
 </html>
