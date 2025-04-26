@@ -7,7 +7,40 @@
   <meta name="keywords" content="portfolio, web developer, HTML, CSS, JavaScript" >
   <meta name="author" content="Anovi buckoti" >
   <title>My Portfolio</title>
+  <link rel="stylesheet" href="general-style.css" >
   <link rel="stylesheet" href="style.css" >
+  <style>
+    header {
+    background-color: #007acc;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      padding: 15px 25px;
+      margin: 5px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    nav a:hover, nav a.active {
+      background-color: #004b80;
+    }
+    #themeToggle:hover {
+      background: black;
+      color: white;
+    }
+
+
+  </style>
 </head>
 <body onload="greetUser()">
   <header>
@@ -18,8 +51,8 @@
         <a href="projects.html">Projects</a>
         <a href="contact.html">Contact</a>
         <a href="survey.html">Survey</a>
+        <button id="themeToggle">🌙</button>
     </nav>
-    <button id="themeToggle">Toggle Theme</button>
   </header>
   <section id="greetsection">
     <h3 id="greeting" style="margin: 5px;"></h3>
@@ -29,14 +62,14 @@
 
     <section>
       <h2>Featured Project</h2>
-      <img src="9784.jpg" alt="Screenshot of project" />
+      <img src="website.png" alt="Screenshot of project" />
       <p>This is a project I created using HTML, CSS, and JavaScript.</p>
     </section>
 
     <section>
       <h2>Watch My Introduction</h2>
       <iframe 
-      width="652" height="367"src="https://www.youtube.com/embed/-ddfZ0atNAU" style="border: none;" title="Process State Management" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+      width="652" height="367"src="https://www.youtube.com/embed/-ddfZ0atNAU"  allowfullscreen>
       </iframe>
     </section>
 

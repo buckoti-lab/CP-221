@@ -115,8 +115,8 @@
       <a href="projects.html">Projects</a>
       <a href="contact.html">Contact</a>
       <a href="survey.html">Survey</a>
+      <button id="themeToggle">🌙</button>
     </nav>
-    <button id="themeToggle">Toggle Theme</button>
   </header>
 
   <main>
@@ -125,7 +125,7 @@
       <div class="about-left">
         <h1>About Me</h1>
         <figure>
-          <img src="9784.jpg" alt="Yusuph Buckoti Profile Picture">
+          <img src="9784.jpg" alt="Yusuph Buckoti Profile Picture" style="border-radius: 50%;">
           <figcaption>Yusuph Buckoti – Continuing Computer Science Student</figcaption>
         </figure>
         <p>Hello! I'm <span class="highlight">Yusuph Buckoti</span>, a passionate student of Computer Science at The University of Dodoma. I'm driven by curiosity, creativity, and the desire to build smart solutions for real-world problems.</p>
@@ -190,19 +190,27 @@
   </footer>
 
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const toggleBtn = document.getElementById('themeToggle');
-      if (localStorage.getItem('theme') === 'dark') {
-        document.body.classList.add('dark-mode');
-      }
+    document.addEventListener("DOMContentLoaded", () => {
+  const themeToggle = document.getElementById("themeToggle");
 
-      toggleBtn.addEventListener('click', () => {
-        document.body.classList.toggle('dark-mode');
-        localStorage.setItem('theme',
-          document.body.classList.contains('dark-mode') ? 'dark' : 'light'
-        );
-      });
-    });
+  // Check for saved theme
+  if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark-mode");
+    themeToggle.textContent = "☀️";
+  }
+
+  themeToggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+    if (document.body.classList.contains("dark-mode")) {
+      localStorage.setItem("theme", "dark");
+      themeToggle.textContent = "☀️";
+    } else {
+      localStorage.setItem("theme", "light");
+      themeToggle.textContent = "🌙";
+    }
+  });
+});
+
   </script>
 </body>
 </html>
