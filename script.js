@@ -16,7 +16,7 @@ function greetUser() {
     message = "Good night";
   }
 
-  // If name is entered, personalize the greeting
+ 
   if (name && name.trim() !== "") {
     greeting.textContent = `${message}, ${name}!`;
   } else {
@@ -27,7 +27,7 @@ function greetUser() {
 document.addEventListener("DOMContentLoaded", () => {
   const themeToggle = document.getElementById("themeToggle");
 
-  // Check for saved theme
+
   if (localStorage.getItem("theme") === "dark") {
     document.body.classList.add("dark-mode");
     themeToggle.textContent = "☀️";

@@ -1,41 +1,19 @@
-# Personal Portfolio Website
+### Tools used
+Html this is to make the web form that allowed about me contacts and the other interfaces
+CSS w3c validator this is to validate the CSS styles 
+JavaScript for the interaction between html codes and dark theme 
 
-Welcome to my personal portfolio! This website showcases who I am, what I do, and the projects I’ve worked on. It reflects my journey as a software developer and highlights my skills in web development, AI, and database systems.
+### Key features implemented
+The implemented key features are the use of toggle themes and greetings
+The use window methods this is to inform some contents for the website to be accessed when someone click it.
 
-# About Me
+### Challenges 
+The create toggle themes 
+Writing the correct JavaScript codes that gives the interactive with the html code
 
-I’m a passionate software developer with experience in building both frontend and backend applications. I specialize in:
-- Web Development (HTML, CSS, JavaScript, Flask, PHP)
-- AI/ML Integration (TensorFlow, scikit-learn, SHAP, LIME)
-- Database Management (MySQL, SQL)
-- System Design (University systems, Internship platforms, Smart city solutions)
+### The solutions to this were as follows
+The thorough reading of lectures provided and vivid examples from different source like W3School
+The analytical used of proper implementing the codes after writing lines of codes to understand if it works properly before proceeding to other pages. Also some of the online tools and youtube toturials were used to solve or the challenges
 
-# Website Features
 
-- Home– Introduction with personal branding.
-- About Me – My background, education, and technical skills.
-- Portfolio – A showcase of selected projects with details.
-- Contact – Form to reach out or connect.
-- Survey – Interactive section to collect feedback or suggestions.
-
-# Projects Included
-
-- University Management System (Flask + MySQL)
-- MedIntelX – AI-powered healthcare consultation
-- Loan Prediction with Explainable AI (SHAP & LIME)
-- Smart Traffic Management System (C++ + AI)
-- Internship Listing System (PHP + MySQL + AJAX)
-
-# Technologies Used
-
-- Frontend: HTML, CSS, JavaScript
-- Backend: Flask (Python), PHP
-- Database: MySQL
-- AI: scikit-learn, TensorFlow, SHAP
-- Tools: IntelliJ IDEA, XAMPP, Postman, Git,Vscode
-
-# How to Run
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/buckoti-lab/portifolio.git
+ 

@@ -27,7 +27,11 @@
 
     h1 {
       text-align: center;
-      color: black;
+      color:white;
+    }
+    h2 {
+      text-align: center;
+      color:black;
     }
 
     form {
@@ -88,22 +92,18 @@
     body.dark-mode input[type="submit"] {
       background-color: #2196f3;
     }
+    body.dark-mode h2{
+      color: white;
+    }
 
     /* Responsive */
-    @media (max-width: 600px) {
+    @media (max-width: 300px) {
       main {
         margin: 40px 10px;
         padding: 20px;
       }
-
-      nav {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-
       nav a {
-        margin: 5px;
+        width: 100%;
       }
     }
   </style>
@@ -122,7 +122,7 @@
   </header>
 
   <main>
-    <h1>Contact Me</h1>
+    <h2>Contact Me</h2>
     <form onsubmit="return validateContactForm()">
       <label for="name">Name:</label>
       <input type="text" id="name" required>

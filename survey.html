@@ -1,30 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Survey</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Me - Yusuph Buckoti</title>
+  <meta name="description" content="Learn more about Yusuph Buckoti, a Computer Science student with web development skills." />
+  <meta name="keywords" content="computer science, web development, portfolio, skills, education, HTML, CSS, JS" />
+  <meta name="author" content="Yusuph Buckoti" />
   <link rel="stylesheet" href="general-style.css">
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f7f9fc;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
-      padding: 0;
-    }
-
+      background-color: #f9f9f9;
+      color: #333;
+    } 
     main {
       max-width: 700px;
       margin: 80px auto;
       padding: 30px;
-      background-color: #ffffff;
-      border-radius: 12px;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+     .surveyForm {
+      flex: 1;
+      max-width: 700px;
+      background-color: #fff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
 
     h1 {
       text-align: center;
-      color:black;
+      color:white;
       margin-bottom: 30px;
+    }
+    h2{
+        text-align: center;
+        color: black;
+        margin-bottom: 30px;
     }
 
     form {
@@ -72,30 +86,24 @@
     body.dark-mode main {
       background-color: #1e1e1e;
     }
+    body.dark-mode h2{
+        color: white;
+    }
 
     body.dark-mode textarea {
       background-color: #2a2a2a;
       color: #f1f1f1;
     }
-
-    body.dark-mode nav a {
-      color: #f1f1f1;
+    body.dark-mode .surveyForm{
+      background-color: #1e1e1e;
     }
 
-    @media screen and (max-width: 600px) {
-      main {
-        margin: 40px 15px;
-        padding: 20px;
-      }
 
-      form {
-        font-size: 14px;
+    @media screen and (max-width:300px){
+        nav a{
+          width: 100%;
+        }
       }
-
-      textarea {
-        font-size: 14px;
-      }
-    }
   </style>
 </head>
 <body>
@@ -112,23 +120,28 @@
   </header>
 
   <main>
-    <h1>Survey</h1>
-      <form>
-        <label>How did you find my portfolio?</label><br>
-        <input type="radio" name="source" value="LinkedIn" required> LinkedIn
-        <input type="radio" name="source" value="GitHub"> GitHub
-        <input type="radio" name="source" value="Referral"> Referral<br><br>
-
-        <label>What features do you like?</label><br>
-        <input type="checkbox" name="features" value="Design"> Design
-        <input type="checkbox" name="features" value="Interactivity"> Interactivity
-        <input type="checkbox" name="features" value="Projects"> Projects<br><br>
-
-        <label for="feedback">Additional Feedback:</label><br>
-        <textarea id="feedback" required></textarea><br><br>
-
-        <input type="submit" value="Submit">
-    </form>
+    <section class="survey-container">
+      <!-- Left Column -->
+      <div class="surveyForm">
+        <h2>Survey</h2>
+        <form>
+          <label>How did you find my portfolio?</label><br>
+          <input type="radio" name="source" value="LinkedIn" required> LinkedIn
+          <input type="radio" name="source" value="GitHub"> GitHub
+          <input type="radio" name="source" value="Referral"> Referral<br><br>
+  
+          <label>What features do you like?</label><br>
+          <input type="checkbox" name="features" value="Design"> Design
+          <input type="checkbox" name="features" value="Interactivity"> Interactivity
+          <input type="checkbox" name="features" value="Projects"> Projects<br><br>
+  
+          <label for="feedback">Additional Feedback:</label><br>
+          <textarea id="feedback" required></textarea><br><br>
+  
+          <input type="submit" value="Submit">
+      </form>
+      </div>
+     </section>
   </main>
 
   <footer>
@@ -136,7 +149,7 @@
   </footer>
 
   <script>
-  document.addEventListener("DOMContentLoaded", () => {
+    document.addEventListener("DOMContentLoaded", () => {
   const themeToggle = document.getElementById("themeToggle");
 
   // Check for saved theme

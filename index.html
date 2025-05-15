@@ -4,7 +4,7 @@
   <meta charset="UTF-8" >
   <meta name="viewport" content="width=device-width, initial-scale=1.0" >
   <meta name="description" content="Personal Portfolio Website" >
-  <meta name="keywords" content="portfolio, web developer, Anovi buckoti,HTML, CSS, JavaScript" >
+  <meta name="keywords" content="portfolio, web developer, HTML, CSS, JavaScript" >
   <meta name="author" content="Anovi buckoti" >
   <title>My Portfolio</title>
   <link rel="stylesheet" href="general-style.css" >
@@ -38,7 +38,19 @@
       background: black;
       color: white;
     }
+    @media screen and (max-width:500px){
+      iframe,img{
+        width: 100%;
+        height:fit-content;      
+      }
+      #greeting{
+         width: 100%;
+        }
+      nav a{
+        width: 100%;
+      }
 
+    }
 
   </style>
 </head>
@@ -54,11 +66,9 @@
         <button id="themeToggle">🌙</button>
     </nav>
   </header>
-  <section id="greetsection">
-    <h3 id="greeting" style="margin: 5px;"></h3>
+  <section id="greeting">
   </section>
 
- 
 
     <section>
       <h2>Featured Project</h2>
@@ -69,7 +79,7 @@
     <section>
       <h2>Watch My Introduction</h2>
       <iframe 
-      width="652" height="367"src="https://www.youtube.com/embed/-ddfZ0atNAU"  allowfullscreen>
+      src="https://www.youtube.com/embed/7xBDOl9nABw"  allowfullscreen>
       </iframe>
     </section>
 

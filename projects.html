@@ -2,57 +2,44 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>My Projects</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Me - Yusuph Buckoti</title>
+  <meta name="description" content="Learn more about Yusuph Buckoti, a Computer Science student with web development skills." />
+  <meta name="keywords" content="computer science, web development, portfolio, skills, education, HTML, CSS, JS" />
+  <meta name="author" content="Yusuph Buckoti" />
+  <link rel="stylesheet" href="general-style.css">
   <style>
-    html, body {
-      height: 100%;
-      margin: 0;
-      padding: 0;
-    }
-
     body {
-      font-family: Arial, sans-serif;
-      display: flex;
-      flex-direction: column;
-      background: #f9f9f9;
-      color: black;
-    }
-
-    .wrapper {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-    }
-
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    } 
     main {
       padding: 40px 20px;
       max-width: 1200px;
       margin: auto;
+    }
+
+    .project-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    .project{
       flex: 1;
-    }
-
-    h1 {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-
-    .project {
+      min-width: 300px;
       background-color: #fff;
-      border: 1px solid #ddd;
-      padding: 20px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 25px;
       border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
-
-    .project h2 {
-      margin-top: 0;
-      color: #007acc;
+    h1{
+      color: white;
+    }
+     h2 {
+      color: #007bff;
     }
 
     .project button {
@@ -69,7 +56,6 @@
     .project button:hover {
       background-color: #005f99;
     }
-
     .details {
       margin-top: 10px;
       padding: 10px;
@@ -78,85 +64,80 @@
       border-radius: 5px;
       display: none;
     }
-
-
-    body.dark-mode .project {
-      background-color: #1e1e1e;
-      color: #f1f1f1;
-    }
-
     body.dark-mode .details {
       background-color: #222;
       border-left-color: #00bfff;
     }
 
-    body.dark-mode nav a {
-      color: #ddd;
+    body.dark-mode .project{
+      background-color: #1e1e1e;
     }
 
-    /* Responsive */
-    @media screen and (max-width: 900px) {
-      .projects {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
 
-    @media screen and (max-width: 600px) {
-      .projects {
-        grid-template-columns: 1fr;
+    @media screen and (max-width:300px){
+        nav a{
+          width: 100%;
+        }
+        .project-container{
+          width: 100%;
+          padding: 2px;
+        }
+        .project{
+          min-width: 100%;
+          padding: 2px;
+        }
+  
       }
-
-      main {
-        padding-top: 20px;
-      }
-    }
   </style>
-  <link rel="stylesheet" type="text/css" href="general-style.css">
 </head>
 <body>
-  <div class="wrapper">
-    <header>
-      <h1>Welcome to My Portfolio</h1>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About Me</a>
-        <a href="projects.html" class="active">Projects</a>
-        <a href="contact.html">Contact</a>
-        <a href="survey.html">Survey</a>
-        <button id="themeToggle">🌙</button>
-      </nav>
-    </header>
+  <header>
+    <h1>Welcome to My Portfolio</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+      <a href="survey.html">Survey</a>
+      <button id="themeToggle">🌙</button>
+    </nav>
+  </header>
 
-    <main>
-      <h1>My Projects</h1>
-      <div class="projects">
-        <div class="project">
-          <h2>AI Medical Assistant</h2>
-          <p>This project uses Flask and TensorFlow to provide AI-powered diagnosis support.</p>
-          <button onclick="toggleDetails(this)">Show Details</button>
-          <div class="details">Implemented LIME and SHAP for interpretability.</div>
-        </div>
-        <div class="project">
-          <h2>Smart Traffic Manager</h2>
-          <p>Urban congestion management system using Python and computer vision.</p>
-          <button onclick="toggleDetails(this)">Show Details</button>
-          <div class="details">Uses YOLOv5 for vehicle detection and congestion graphs.</div>
-        </div>
-        <div class="project">
-          <h2>Loan Prediction System</h2>
-          <p>Predicts loan approval with explainable AI techniques.</p>
-          <button onclick="toggleDetails(this)">Show Details</button>
-          <div class="details">Uses SHAP plots saved using Kaleido.</div>
-        </div>
+  <main>
+    <section class="project-container">
+      <!-- Left Column -->
+      <div class="project">
+        <h2>AI Medical Assistant</h2>
+        <p>This project uses Flask and TensorFlow to provide AI-powered diagnosis support.</p>
+        <button onclick="toggleDetails(this)">Show Details</button>
+        <div class="details">Implemented LIME and SHAP for interpretability.</div>
       </div>
-    </main>
-  </div>
+
+      <!-- Middle Column -->
+      <div class="project">
+        <h2>Smart Traffic Manager</h2>
+        <p>Urban congestion management system using Python and computer vision.</p>
+        <button onclick="toggleDetails(this)">Show Details</button>
+        <div class="details">Uses YOLOv5 for vehicle detection and congestion graphs.</div>
+      </div>
+
+      <!-- Right Column -->
+      <div class="project">
+        <h2>Loan Prediction System</h2>
+        <p>Predicts loan approval with explainable AI techniques.</p>
+        <button onclick="toggleDetails(this)">Show Details</button>
+        <div class="details">Uses SHAP plots saved using Kaleido.</div>
+      </div>
+      
+    </section>
+  </main>
 
   <footer>
     <p>&copy; 2025 opamp. All rights reserved.</p>
   </footer>
 
   <script>
+
     function toggleDetails(button) {
       const details = button.nextElementSibling;
       if (details.style.display === "none" || details.style.display === "") {
@@ -168,7 +149,7 @@
       }
     }
 
-    document.addEventListener("DOMContentLoaded", () => {
+  document.addEventListener("DOMContentLoaded", () => {
   const themeToggle = document.getElementById("themeToggle");
 
   // Check for saved theme
