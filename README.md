@@ -15,5 +15,8 @@ Writing the correct JavaScript codes that gives the interactive with the html co
 The thorough reading of lectures provided and vivid examples from different source like W3School
 The analytical used of proper implementing the codes after writing lines of codes to understand if it works properly before proceeding to other pages. Also some of the online tools and youtube toturials were used to solve or the challenges
 
+###  Clone the repository:
+   ```bash
+   git clone https://github.com/CP-221/portifolio.git
 
  
