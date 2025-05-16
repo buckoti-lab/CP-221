@@ -95,6 +95,14 @@
     body.dark-mode h2{
       color: white;
     }
+    .error{
+      color: red;
+      font-size: 1em;
+    }
+    .success{
+      color: green;
+      font-size: 1em;
+    }
 
     /* Responsive */
     @media (max-width: 500px) {
@@ -123,20 +131,25 @@
 
   <main>
     <h2>Contact Me</h2>
-    <form onsubmit="return validateContactForm()">
+    <form id="contactForm">
       <label for="name">Name:</label>
-      <input type="text" id="name" required>
+      <input type="text" id="name" >
+      <span class="error" id="nameError"></span>
 
       <label for="email">Email:</label>
-      <input type="email" id="email" required>
+      <input type="email" id="email" >
+      <span class="error" id="emailError"></span>
 
       <label for="phone">Phone:</label>
-      <input type="text" id="phone" required>
+      <input type="text" id="phone" >
+      <span class="error" id="phoneError"></span>
 
       <label for="message">Message:</label>
-      <textarea id="message" required></textarea>
+      <textarea id="message" ></textarea>
+      <span class="error" id="messageError"></span>
 
       <input type="submit" value="Send">
+      <span class="success" id="submitSuccess"></span>
     </form>
   </main>
 
@@ -145,24 +158,48 @@
   </footer>
 
   <script>
-    function validateContactForm() {
+    document.getElementById("contactForm").addEventListener("submit",function(e){
+       e.preventDefault();
+       
+       document.getElementById("nameError").innerText = "";
+       document.getElementById("emailError").innerText = "";
+       document.getElementById("phoneError").innerText = "";
+       document.getElementById("messageError").innerText = "";
+
+      let valid = true;
+      const name = document.getElementById("name").value;
       const email = document.getElementById("email").value;
       const phone = document.getElementById("phone").value;
+      const message = document.getElementById("message").value;
+
+      
+      if (!name){
+        document.getElementById("nameError").innerText = "Name is required!.";
+        valid = false;
+      }
+
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      const phoneRegex = /^\d{10}$/;
-
       if (!emailRegex.test(email)) {
-        alert("Please enter a valid email address.");
-        return false;
+        document.getElementById("emailError").innerText = "Valid email is required!.";
+        valid = false;
       }
 
+      const phoneRegex = /^\d{10}$/;
       if (!phoneRegex.test(phone)) {
-        alert("Phone number should be 10 digits.");
-        return false;
+        document.getElementById("phoneError").innerText = "Phone number should be 10 digits";
+        valid = false;
+
       }
 
-      return true;
-    }
+      if (!message){
+      document.getElementById("messageError").innerText = "Name is required!.";
+      valid = false;
+      }
+      
+      if (valid){
+        document.getElementById("submitSuccess").innerText = "Form submitted successfully!.";
+      }
+    })
 
   document.addEventListener("DOMContentLoaded", () => {
   const themeToggle = document.getElementById("themeToggle");
